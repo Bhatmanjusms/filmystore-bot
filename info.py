@@ -31,10 +31,10 @@ FSUB_IMG = (environ.get('FSUB_IMG', 'https://i.ibb.co/cShkPjcZ/x.jpg')).split()
 
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6904653976 399726799').split()] 
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002338544710').split()]
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-10020599449873'))  
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-10020599449873'))  
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002059449873'))  
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1002059449873'))  
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1002309447562'))  
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-10020599449873')) 
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002059449873')) 
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-100') 
@@ -59,8 +59,8 @@ AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-100'))
 AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-100'))
 
 IS_VERIFY = is_enabled('IS_VERIFY', False)
-LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-10020599449873'))
-LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-10020599449873'))
+LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1002059449873'))
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002059449873'))
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://telegra.ph/file/9ecc5d6e4df5b83424896.jpg")
 
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/")
