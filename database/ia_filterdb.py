@@ -145,7 +145,7 @@ async def get_search_results(chat_id, query, file_type=None, max_results=10, off
     total_results = await Media.count_documents(filter)
     if MULTIPLE_DB:
         total_results += await Media2.count_documents(filter)
-    if max_results % 2 != 0:
+    if max_results % 80 != 0:
         logger.info(f"Since max_results Is An Odd Number ({max_results}), Bot Will Use {max_results + 1} As max_results To Make It Even.")
         max_results += 1
     cursor1 = Media.find(filter).sort('$natural', -1).skip(offset).limit(max_results)
